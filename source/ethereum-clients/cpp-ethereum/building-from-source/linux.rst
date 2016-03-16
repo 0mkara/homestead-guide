@@ -40,9 +40,10 @@ Steps: ::
     sudo dpkg-reconfigure locales
     sudo apt-get -y install software-properties-common
 
-    wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key | sudo apt-key add -
-    sudo apt-get -y install llvm-3.7-dev
     sudo add-apt-repository "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.7 main"
+    wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key | sudo apt-key add -
+    sudo apt-get -y update
+    sudo apt-get -y install llvm-3.7-dev
 
     sudo add-apt-repository -y ppa:ethereum/ethereum-qt
     sudo add-apt-repository -y ppa:ethereum/ethereum
